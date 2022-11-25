@@ -1,7 +1,7 @@
 
 #include <stdio.h>
 #define LIM 30
-#define LIM_MAX 31
+#define LIM_FGETS 31
 #define REENCARGO_BASE 8
 #define REENCARGO_RETRASO 4
 
@@ -14,10 +14,10 @@ int main()
     int dias_retraso;
     printf("\nBienvenido a mi programa...\n");
     printf("Ingrese el nombre del cliente: ");
-    fgets(nombre, LIM_MAX, stdin);
+    fgets(nombre, LIM_FGETS, stdin);
     fflush(stdin);
     printf("Ingrese el Titulo de la pelicula: ");
-    fgets(pelicula, LIM_MAX, stdin);
+    fgets(pelicula, LIM_FGETS, stdin);
     fflush(stdin);
     printf("Ingrese la cantidad de dias de retraso: ");
     scanf("%d", &dias_retraso);
