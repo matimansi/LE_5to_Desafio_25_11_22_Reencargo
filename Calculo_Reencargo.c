@@ -2,6 +2,7 @@
 #include <stdio.h>
 #define LIM 30
 #define LIM_MAX 31
+#define REENCARGO_BASE 8
 #define REENCARGO_RETRASO 4
 
 void Calculo_Reencargo (char nombre[LIM], char pelicula[LIM], int dias_retraso);
@@ -37,8 +38,8 @@ void Elimino_Enter (char nombre[LIM], char pelicula[LIM])
 
 void Calculo_Reencargo (char nombre[LIM], char pelicula[LIM], int dias_retraso)
 {
-    int reencargo_base = 8, reencargo_retraso;
-    reencargo_retraso = (dias_retraso*REENCARGO_RETRASO)+reencargo_base;
+    int reencargo_retraso;
+    reencargo_retraso = (dias_retraso*REENCARGO_RETRASO)+REENCARGO_BASE;
     if (dias_retraso == 0) printf("El Cliente %s alquilo %s y debe pagar $8\n\n", nombre, pelicula);
     else printf("El Cliente %s alquilo la pelicula %s y debe pagar $%d\n\n", nombre, pelicula, reencargo_retraso);
 }
